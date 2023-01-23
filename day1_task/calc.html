@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.3.js"></script>
+    <style>
+        #btn_plus{
+            background-color: rgb(174, 218, 174);
+            border: 0px;
+            border-radius: 25%;
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+        #btn_sub{
+            background-color: rgb(232, 179, 197);
+            border: 0px;
+            border-radius: 25%;
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+        #btn_multy{
+            background-color: rgb(246, 204, 128);
+            border: 0px;
+            border-radius: 25%;
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+        #btn_divid{
+            background-color: rgb(188, 188, 255);
+            border: 0px;
+            border-radius: 25%;
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="inp1" placeholder="enter num1" style="width: 100px;" >
+    <input type="text" id="inp2" placeholder="enter num2" style="width: 100px;" >
+    &nbsp <span id="output"></span>
+    <br><br>
+    <button id="btn_plus">+</button>&nbsp &nbsp &nbsp &nbsp
+    <button id="btn_sub">-</button>&nbsp &nbsp &nbsp &nbsp
+    <button id="btn_multy">*</button>&nbsp &nbsp &nbsp &nbsp
+    <button id="btn_divid">/</button>
+    <script>
+       
+        $("#btn_plus").click(function () {
+            var x =parseInt($('#inp1').val());
+            var y= parseInt($('#inp2').val())
+            var result =x+y;
+            console.log(result)
+            $("#output").html(result)
+        });
+
+        $("#btn_sub").click(function () {
+            var result = parseInt($('#inp1').val()) - parseInt($('#inp2').val())
+            $("#output").html(result)
+        });
+
+        $("#btn_multy").click(function () {
+            var result = parseInt($('#inp1').val()) * parseInt($('#inp2').val())
+            $("#output").html(result)
+        });
+
+        $("#btn_divid").click(function () {
+            var result = parseInt($('#inp1').val()) / parseInt($('#inp2').val())
+            $("#output").html(result)
+        });
+
+    </script>
+</body>
+</html>
